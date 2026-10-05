@@ -98,6 +98,9 @@ commentbtn.addEventListener("click", function() {
       .then(function(data) {
         commentdisplay.textContent = data.message;
         commentinput.value = "";
+      })
+      .catch(function(error) {
+        commentdisplay.textContent = "Comment feature requires the backend server to be running locally.";
       });
   }
 });
